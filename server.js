@@ -15,7 +15,9 @@ const logger = (req, res, next) =>
     next();
 }
 
-app.use(logger);
+server.use(logger);
+
+server.use('/static', express.static('public'));
 
 // Place for Routing information 
 
